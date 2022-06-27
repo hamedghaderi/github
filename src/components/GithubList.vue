@@ -1,10 +1,23 @@
 <script setup>
+import { useGithubStore } from '../stores/github'
+import GithubStar from './GithubStar.vue'
+
+const store = useGithubStore()
+
 defineProps({
   repositories: {
     type: Object,
     required: true,
   },
 })
+
+const isStarred = id => {
+  return store.hasStar(id)
+}
+
+const toggleStar = id => {
+  store.toggleStar(id)
+}
 </script>
 <template>
   <div
@@ -88,7 +101,9 @@ defineProps({
 
               <td
                 class="border-b truncate border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
-                Star
+                <GithubStar
+                  :is-starred="isStarred(item.id)"
+                  @toggle="toggleStar(item.id)" />
               </td>
             </tr>
           </tbody>
