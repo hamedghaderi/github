@@ -12,7 +12,21 @@ export const useGithubStore = defineStore('github', {
   },
 
   getters: {
-    getLastWeekMostFavoriteRepos: state => state.repositories,
+    getLastWeekMostFavoriteRepos(state) {
+      return (selected = 1) => {
+        if (parseInt(selected) === 1) {
+          return state.repositories
+        }
+
+        return {
+          incomplete_results: state.repositories.incomplete_results,
+          total_count: state.repositories.total_count,
+          items: state.repositories?.items?.filter(item =>
+            this.hasStar(parseInt(item.id))
+          ),
+        }
+      }
+    },
 
     hasStar: state => {
       return id =>
