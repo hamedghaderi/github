@@ -1,6 +1,7 @@
 <script setup>
 import { useGithubStore } from '../stores/github'
 import GithubStar from './GithubStar.vue'
+import Loader from './Loader.vue'
 
 const store = useGithubStore()
 
@@ -108,6 +109,10 @@ const toggleStar = id => {
             </tr>
           </tbody>
         </table>
+
+        <p class="flex items-center justify-center text-blue-600" v-else>
+          <Loader />
+        </p>
       </div>
     </div>
   </div>
