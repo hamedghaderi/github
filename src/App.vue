@@ -1,9 +1,13 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>To be continue...</div>
+  <main class="pt-8 pb-12 bg-white dark:bg-slate-800 min-h-screen">
+    <div class="container mx-auto">
+      <router-view />
+    </div>
+  </main>
 </template>
 
 <style></style>
