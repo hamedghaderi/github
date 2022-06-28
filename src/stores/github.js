@@ -60,5 +60,9 @@ export const useGithubStore = defineStore('github', {
 
       this.starIds.push(id)
     },
+
+    resetStars() {
+      this.starIds = []
+    },
   },
 })
