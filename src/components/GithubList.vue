@@ -75,7 +75,13 @@ const toggleStar = id => {
               <!-- Name -->
               <td
                 class="border-b truncate border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
-                {{ item.name.toLocaleUpperCase() }}
+                <a
+                  :href="item.html_url"
+                  :title="item.name.toLocaleUpperCase()"
+                  target="_blank"
+                  class="text-blue-600 dark:text-blue-400 hover:underline">
+                  {{ item.name.toLocaleUpperCase() }}
+                </a>
               </td>
 
               <!-- Created By -->
