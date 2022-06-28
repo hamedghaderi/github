@@ -81,6 +81,10 @@ const toggleStar = id => {
               <!-- Created By -->
               <td
                 class="border-b truncate border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
+                <img
+                  :src="item.owner.avatar_url"
+                  :alt="item.owner.login"
+                  class="w-12 h-12" />
                 <p>{{ item.owner.login }}</p>
               </td>
 
