@@ -1,41 +1,13 @@
 # Github
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple project to list last week highest starred repositories.
 
-## Recommended IDE Setup
+## Installment
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+This is a `VueJs` project which is absolutely simple to install. You need to have `npm` installed on your machine.
+After cloning the project just type go to the project folder root, and type `npm install` on your command line.
+After finishing Installment, type `npm run dev` and tadaaaa.
 
-## Customize configuration
+## Author
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Hamed Ghader
