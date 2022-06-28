@@ -1,8 +1,10 @@
 <script setup>
+import { useDate } from '../composables/Date'
 import { useGithubStore } from '../stores/github'
 import GithubStar from './GithubStar.vue'
 import Loader from './Loader.vue'
 
+const { hummanReadable } = useDate()
 const store = useGithubStore()
 
 defineProps({
@@ -91,7 +93,7 @@ const toggleStar = id => {
               <!-- Created At -->
               <td
                 class="border-b truncate border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
-                {{ item.created_at }}
+                {{ hummanReadable(item.created_at) }}
               </td>
 
               <!-- Number of Stars -->
