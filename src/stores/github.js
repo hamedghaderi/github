@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import { Axios } from '../axios'
 import { useDate } from '../composables/Date'
 import { useStorage } from '@vueuse/core'
+import { useError } from '../composables/Error'
 
 export const useGithubStore = defineStore('github', {
   state: () => {
@@ -43,7 +44,9 @@ export const useGithubStore = defineStore('github', {
         )
         this.repositories = data
       } catch (error) {
-        console.log(error)
+        const { displayError } = useError()
+
+        displayError(error)
       }
     },
 
